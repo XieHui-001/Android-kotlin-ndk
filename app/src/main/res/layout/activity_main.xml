@@ -23,4 +23,12 @@
         android:gravity="center"
         android:text="Hello World!" />
 
+    <com.example.ndk.PwdEditText
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.example.ndk.testEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

@@ -74,6 +74,7 @@ public class PwdEditText extends androidx.appcompat.widget.AppCompatEditText {
         textLength = 6;
 
         this.setBackgroundDrawable(null);
+        setFocusableInTouchMode(true);
         setLongClickable(false);
         setTextIsSelectable(false);
         setCursorVisible(false);

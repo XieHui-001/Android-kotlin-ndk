@@ -1,9 +1,7 @@
 #include <jni.h>
+#include <jni.h>
+#include <jni.h>
 #include <string>
-#include <jni.h>
-#include <jni.h>
-#include <jni.h>
-#include <jni.h>
 
 
 //extern "C" jstring
@@ -20,15 +18,25 @@ Java_com_example_ndk_MainActivity_getmyJNTValue(JNIEnv *env, jobject thiz) {
     return env->NewStringUTF(value.c_str());
 }
 
+
+
 extern "C" jint
 Java_com_example_ndk_MainActivity_isIntCpp(JNIEnv *env, jobject thiz) {
-    return 12333;
+    int a,b,c = 10;
+    for (int i = 0; i < c + b + a ; ++i) {
+        printf("%s",i);
+    }
+    return  c + b + a;
 }
+
+
 
 extern "C" jboolean
 Java_com_example_ndk_MainActivity_isBooleanCpp(JNIEnv *env, jobject thiz) {
-    if (1 == 1) {
-        return true;
-    }
-    return false;
+    return 1 == 1;
 }
+
+
+class x {
+    static thread_local std::string str;
+};
